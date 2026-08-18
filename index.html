@@ -119,10 +119,8 @@ nav{
   transition:all .3s ease;
 }
 .nav-cta:hover{background:var(--ink);color:var(--cream);}
-.menu-btn{display:none;}
 @media(max-width:900px){
   .nav-links{display:none;}
-  .menu-btn{display:block;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--ink);padding:9px 16px;border-radius:100px;}
 }
 
 /* ---------- HERO ---------- */
@@ -131,13 +129,13 @@ nav{
   min-height:100vh;
   display:flex;
   align-items:center;
-  padding:150px 0 90px;
+  padding:120px 0 70px;
   overflow:hidden;
 }
 .hero-grid{
   display:grid;
   grid-template-columns:1.1fr 0.9fr;
-  gap:40px;
+  gap:24px;
   align-items:center;
   width:100%;
 }
@@ -215,7 +213,7 @@ nav{
   overflow:hidden;
   box-shadow:0 40px 80px -30px rgba(155,19,57,0.45);
 }
-.hc-main img{width:100%;height:100%;object-fit:cover;display:block;}
+.hc-main img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
 .hc-tag{
   position:absolute;
   bottom:36px;left:-40px;
@@ -241,7 +239,7 @@ nav{
 
 @media(max-width:960px){
   .hero-grid{grid-template-columns:1fr;}
-  .hero-visual{height:340px;margin-top:60px;order:2;}
+  .hero-visual{height:340px;margin-top:32px;order:2;}
   .hero h1{max-width:none;}
 }
 
@@ -260,13 +258,13 @@ nav{
 
 /* ---------- SECTION scaffolding ---------- */
 section{position:relative;}
-.section-pad{padding:150px 0;}
-@media(max-width:860px){.section-pad{padding:100px 0;}}
+.section-pad{padding:100px 0;}
+@media(max-width:860px){.section-pad{padding:64px 0;}}
 .section-soft{background:var(--bg-soft);}
 .section-dark{background:var(--bg-deep);color:var(--cream);}
 .section-head{
   display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;
-  margin-bottom:80px;
+  margin-bottom:48px;
 }
 .section-title{
   font-family:var(--display);
@@ -283,13 +281,13 @@ section{position:relative;}
 }
 
 /* ---------- ABOUT ---------- */
-.about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;}
+.about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;}
 .about-name{
   font-family:var(--display);
   font-style:italic;
   font-size:clamp(28px,3vw,40px);
   color:var(--rose);
-  margin-bottom:26px;
+  margin-bottom:16px;
 }
 .about-body p{color:var(--ink-soft);font-size:17px;margin-bottom:22px;line-height:1.8;}
 .about-personality{
@@ -302,15 +300,15 @@ section{position:relative;}
 .about-facts{list-style:none;display:flex;flex-direction:column;gap:12px;}
 .about-facts li{font-size:15.5px;color:var(--ink-soft);}
 .about-photo{
-  margin-top:28px;
+  margin-top:14px;
   border-radius:6px;
   overflow:hidden;
   box-shadow:0 30px 60px -30px rgba(155,19,57,0.4);
   max-width:340px;
 }
-.about-photo img{width:100%;height:auto;display:block;}
+.about-photo img{width:100%;height:auto;display:block;object-position:top;}
 .about-loc{
-  margin-top:40px;
+  margin-top:18px;
   font-family:var(--mono);
   font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);
   display:flex;flex-direction:column;gap:6px;
@@ -322,7 +320,7 @@ section{position:relative;}
 .project{
   display:grid;grid-template-columns:0.5fr 1fr;
   gap:60px;
-  padding:64px 0;
+  padding:38px 0;
   border-top:1px solid var(--line);
   cursor:default;
 }
@@ -481,7 +479,7 @@ section{position:relative;}
 /* ---------- FINAL CTA ---------- */
 .final{
   background:var(--bg-deep);color:var(--cream);
-  padding:170px 0 0;
+  padding:100px 0 90px;
   position:relative;overflow:hidden;
 }
 .final-inner{position:relative;z-index:2;text-align:left;}
@@ -494,17 +492,9 @@ section{position:relative;}
 .final h2 em{font-style:italic;color:var(--rose-soft);}
 .final p{margin-top:26px;color:#E9C9D3;font-size:18px;max-width:44ch;}
 .final .btn-primary{margin-top:44px;}
-.final-visual{
-  margin-top:110px;
-  height:46vh;min-height:340px;
-  position:relative;
-  background:linear-gradient(180deg, var(--rose-deep) 0%, var(--rose) 100%);
-  display:flex;align-items:center;justify-content:center;
-}
-.final-visual svg{width:100%;height:100%;}
 
 /* ---------- FOOTER ---------- */
-footer{background:var(--bg-deep);color:var(--cream);padding:70px 0 40px;}
+footer{background:var(--bg-deep);color:var(--cream);padding:50px 0 30px;}
 .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,0.12);}
 .footer-logo{font-family:var(--display);font-size:26px;}
 .footer-logo span{color:var(--rose-soft);}
@@ -535,7 +525,6 @@ footer{background:var(--bg-deep);color:var(--cream);padding:70px 0 40px;}
         <li><a href="#pricing">Pricing</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Contact</a>
-      <button class="menu-btn" id="menuBtn">Menu</button>
     </nav>
   </div>
 </header>
@@ -623,7 +612,7 @@ footer{background:var(--bg-deep);color:var(--cream);padding:70px 0 40px;}
           <p>First Rooted brings honest conversations with female wellness coaches about the moments that shaped the work they do today. I bring premium design to every carousel slide, turning meaningful discussions into content that's easy to discover, listen to and share.</p>
           <div class="project-links">
             <a href="#">Listen on Spotify ↗</a>
-            <a href="#">Follow on Instagram ↗</a>
+            <a href="https://www.instagram.com/firstrooted/?hl=en" target="_blank" rel="noopener">Follow on Instagram ↗</a>
           </div>
         </div>
       </div>
@@ -854,13 +843,6 @@ footer{background:var(--bg-deep);color:var(--cream);padding:70px 0 40px;}
     <p class="reveal">Whether you need a strategy, stronger content, a better online presence or someone to finally connect all the pieces — let's talk.</p>
     <a href="https://cal.com/ambie-ikpeme-5nifzu/15min" class="btn-primary reveal">Start a conversation →</a>
   </div>
-  <div class="final-visual reveal">
-    <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
-      <path d="M0 300 C 200 220, 320 360, 500 280 S 800 200, 1000 300 S 1200 260, 1200 300" stroke="rgba(255,255,255,0.35)" stroke-width="2" fill="none"/>
-      <path d="M0 250 C 220 170, 340 320, 520 240 S 820 160, 1020 260 S 1200 220, 1200 250" stroke="rgba(255,255,255,0.18)" stroke-width="2" fill="none"/>
-      <text x="60" y="120" font-family="Space Mono, monospace" font-size="13" fill="rgba(255,255,255,0.55)" letter-spacing="3">STRATEGY · CONTENT · GROWTH</text>
-    </svg>
-  </div>
 </section>
 
 </main>
@@ -870,8 +852,7 @@ footer{background:var(--bg-deep);color:var(--cream);padding:70px 0 40px;}
     <div class="footer-grid">
       <div>
         <div class="footer-logo">AMBI<span>E</span></div>
-        <div class="footer-role">Social Media Strategist<br/>Content Strategist<br/>Graphic Designer</div>
-        <div class="footer-loc" style="margin-top:16px;">Based in Nigeria — Working with brands everywhere</div>
+        <div class="footer-loc" style="margin-top:14px;">Based in Nigeria — Working with brands everywhere</div>
       </div>
       <ul class="footer-links">
         <li><a href="https://www.instagram.com/thesocialambie/?hl=en" target="_blank" rel="noopener">Instagram</a></li>
